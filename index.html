@@ -1,625 +1,253 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Responsive HTML</title>
-    <style>
-    *{
-        box-sizing: border-box;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Amanda Affiliate</title>
+  <meta name="description" content="Join Amanda Affiliate and earn by promoting our digital services. Simple, transparent, and rewarding.">
+  <meta name="keywords" content="Amanda Affiliate, affiliate marketing, earn online, passive income, Amanda Inc">
+  <meta name="author" content="Amanda Inc">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Amanda Affiliate">
+  <meta property="og:description" content="Join Amanda Affiliate and earn by promoting our digital services. Simple, transparent, and rewarding.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amandainc.xyz/affiliate"> <!-- Replace with actual URL -->
+  <meta property="og:image" content="https://amandainc.xyz/affiliate/logo.png"> <!-- Replace with actual image URL -->
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Amanda Affiliate">
+  <meta name="twitter:description" content="Join Amanda Affiliate and earn by promoting our digital services. Simple, transparent, and rewarding.">
+  <meta name="twitter:image" content="https://amandainc.xyz/affiliate/logo.png"> <!-- Replace with actual image URL -->
+  
+
+  <!-- Favicon -->
+  <link rel="icon" href="../images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="../images/favicon/apple-touch-icon.png"> <!-- Optional -->
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <script async src="https://ga.jspm.io/npm:es-module-shims@1.5.1/dist/es-module-shims.js" crossorigin="anonymous"></script>
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.165.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.165.0/examples/jsm/"
     }
-        body {
-            margin: 0;
-            box-sizing:border-box;
-            padding: 0;
-            width:100vw;
-            font-family: 'Poppins', sans-serif;
-        }
+  }
+</script>
+<!-- partial -->
+  <script type="module" src="./script.js"></script>
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px;
-            background-color: #ffffff;
-            max-width:100%;
-        }
-
-        nav h2 {
-            color: #333;
-            font-size:1em;
-            margin: 0;
-        }
-
-        nav div {
-            display: flex;
-            gap: 1rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #555;
-            font-weight: 500;
-            font-size:.8em;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #007bff;
-        }
-
-        nav button {
-            background-color: #000;
-            color: white;
-            border: none;
-            border-radius: 15px;
-            font-family: 'Poppins', sans-serif;
-            padding:6px 14px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        nav button:hover {
-            background-color: #0056b3;
-        }
-
-        .fas {
-            margin-left: 5px;
-            font-size: 0.8em;
-        }
-
-        .main-button {
-            background-color: #000;
-            color: white;
-            border: none;
-            border-radius: 15px;
-            font-family: 'Poppins', sans-serif;
-            padding: 6px 14px;
-            font-weight: 500;
-            cursor: pointer;
-            margin-bottom: 1.81rem;
-            transition: background-color 0.3s;
-            
-            margin-left:calc(50% - 40px);
-        }
-
-        .main-button:hover {
-            background-color: #0056b3;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            width:90%;
-            margin-left:5%;
-            margin-block: 20px 0px;
-            font-size:1.76em;
-        }
-        main p{
-            width:75%;
-            margin-left:12%;
-            opacity:.8;
-            font-size:.5em;
-            text-align:center;
-        }
-
-        @media (min-width: 768px) and screen{
-            .container {
-                flex-direction: column;
-            }
-            body{
-                background: #EE1FAA;
-            }
-        }
-    </style>
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://amandainc.xyz/affiliate"> <!-- Replace with actual URL -->
 </head>
 <body>
-    <nav>
-        <h2>Stupoint</h2>
-        <div>
-            <a href="#features">Features</a>
-            <a href="#reviews">Reviews</a>
-             <a href="support/index.html">Support</a>
-        </div>
-        <button onclick="show('l')">Log in<i class="fas fa-chevron-down"></i></button>
-    </nav>
-    <main>
-        <h1>Championing Digital Revolution in Education</h1>
-        <p>Stay connected, stay informed. Our school portal makes it easy for everyone to be a part of the learning journey, anytime and anywhere.</p>
-        <button onclick="show('s')" class="main-button">Sign Up <i class="fas fa-chevron-down"></i></button>
-    <img class="hero" src="hero.jpg" alt="Management platform interface">
-    <style>
-        .hero {
-            max-width: 80%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            margin: .8rem 10%;
-        }
-    </style>
-    </main>
-
-    <section>
-        <style>
-            section {
-                display: grid;
-                  grid-template-columns: 1fr 1fr;  /* Two equal columns */
-                  grid-template-rows: auto; 
-                align-content:center;
-                justify-content:center;
-            
-                
-            }
-            .item {
-                text-align: left;
-                padding: 0rem;
-                color:white;
-                display:flex;
-                flex-direction: column;
-                justify-content:flex-end;
-                width:calc(100%-0rem);
-                border:solid .5px white;
-                
-                height:30vh;
-                padding:.3em;
-                align-items:flex-start;
-                border-radius: 0px;
-                background: #0056b3a2;
-            }
-            .item-h{
-                grid-column:1/3;
-                display:flex;
-                justify-content:center;
-                align-items:center;
-                text-align:center;
-                font-size: 1.3em;
-                
-                background: #0056b3;
-                width:100%;
-                height: 10vh;
-                border-radius: 0px;
-                font-weight:bold;
-            }
-            .item h2 {
-                font-size: .851em;
-                margin-bottom: 0.25rem;
-            }
-            .item p {
-                font-size: 0.5368em;
-                color: #eee;
-            }
-        </style>
-        <div class="item">
-            <h2>Affordable</h2>
-            <p>Our platform is free to enable everyone to access the platform without breaking the bank.</p>
-        </div>
-        <div class="item">
-            <h2>User-Friendly</h2>
-            <p>Simple and intuitive interface that makes navigation a breeze for all users.</p>
-        </div>
-        <div class="item item-h">
-            Why Choose Us?
-        </div>
-        <div class="item">
-            <h2>Secure</h2>
-            <p>Advanced encryption and security measures to protect your data and privacy.</p>
-        </div>
-        <div class="item">
-            <h2>24/7 Support</h2>
-            <p>Round-the-clock assistance to help you with any questions or concerns.</p>
-        </div>
-    </section>
-
-    <div id="features" class="features">
-        <style>
-            .features {
-                padding: 1rem 0.4rem;
-                background: #f8f9fa;
-            }
-            .features h2 {
-                text-align: center;
-                font-size: 1.28em;
-                margin-bottom: 2rem;
-                color: #333;
-            }
-            .features-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 2rem;
-                max-width: 1200px;
-                margin: 0 auto;
-            }
-            .feature-card {
-                background: white;
-                padding: 1.5rem;
-                border-radius: 12px;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-                transition: transform 0.3s ease;
-            }
-            .feature-card:hover {
-                transform: translateY(-5px);
-            }
-            .feature-card i {
-                font-size: 2em;
-                color: #0056b3;
-                margin-bottom: 1rem;
-            }
-            .feature-card h3 {
-                font-size: 1.02em;
-                margin-bottom: 0.5rem;
-                color: #333;
-            }
-            .feature-card p {
-                font-size: 0.59em;
-                color: #666;
-                line-height: 1.6;
-            }
-        </style>
-        <h2>Key Features</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <i class="fas fa-robot"></i>
-                <h3>Research AI</h3>
-                <p>Advanced AI assistance for research and academic queries.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-info-circle"></i>
-                <h3>Info Center</h3>
-                <p>Centralized hub for all school-related information and resources.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-share-alt"></i>
-                <h3>Notes Sharing</h3>
-                <p>Seamlessly share and collaborate on study notes with classmates.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-lightbulb"></i>
-                <h3>Suggestion Box</h3>
-                <p>Platform for students to share ideas and feedback for improvement.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-calendar-alt"></i>
-                <h3>Timetables</h3>
-                <p>Smart scheduling system for managing classes and activities.</p>
-            </div>
-        </div>
+  <nav>
+    <div class="upper">
+      <img src="logo.png" alt="Logo" />
+      <i class="fa fa-bars" onclick="nav(45,this)"></i>
     </div>
-
-    <div class="suggest">
-        <style>
-            .suggest {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                    url('https://images.unsplash.com/photo-1588072432836-e10032774350?w=1600&h=900&fit=crop');
-                background-size: cover;
-                background-position: center;
-                margin-top:2rem;
-                padding:  2rem 2rem 4rem 2rem;
-                text-align: center;
-                color: white;
-                
-            }
-            .suggest h2 {
-                font-size: 1.28em;
-                margin-bottom: 1.5rem;
-            }
-            .suggest textarea {
-                width: 80%;
-                margin-left:10%;
-                display:block;
-                height: 80px;
-                padding: 1rem;
-                border-radius: 8px;
-                border: none;
-                margin-bottom: .1rem;
-                font-family: 'Poppins', sans-serif;
-                color:white;
-                background-color:#fff3;
-                resize: vertical;
-            }
-            .suggest button {
-                background-color: #fff;
-                color: black;
-                border: none;
-                padding: 5px 14px;
-                border-radius: 25px;
-                font-family: 'Poppins', sans-serif;
-                float:right;
-                margin-right:10%;
-                margin-bottom: 1rem;
-                font-weight: 700;
-                cursor: pointer;
-                transition: background-color 0.3s;
-            }
-            .suggest button:hover {
-                color: white;
-                background-color: #0056b3;
-            }
-        </style>
-        <h2>Suggest a new feature</h2>
-        <textarea placeholder="Your suggestion here..."></textarea>
-        <button>Send</button>
+    <div class="items">
+      <a href="">Home</a>
+      <a href="">Overview</a>
+      <a href="">How it works</a>
+      <a href="">Legal</a>
+      <a href="#faq">FAQ</a>
+      <a href="">Sign Up / Log in</a>
     </div>
+  </nav>
+  
+  <main>
+    <h1>Become an Amanda Services Affiliate</h1>
+    <p>Earn real income by promoting Amanda Services to potential customers.</p>
+    <button><a href="">Join Now</a></button>
+    <button class="out"><a href="">Log into your account</a></button>
+    <p style="font-size:.7em" id="countdown">7 days, 12hours, 25 minutes and 5 seconds</p>
+<script>
+  // Set the countdown target date and time (YYYY-MM-DDTHH:MM:SS)
+  const targetDate = new Date("2025-05-17T12:30:00").getTime();
 
-    <div id="reviews" class="reviews">
-        <style>
-            .reviews {
-                display: flex;
-                justify-content:space-evenly;
-                width:100vw;
-                flex-wrap: wrap;
-                align-items: center;
-                padding: 0rem;
-                overflow-y: hidden;
-            }
-            .review-card:hover{
-                background-color: #0056b3;
-                scale: 1.02;
-                transition:all .3s ease-in-out;
-                color:#fff;
-            }
-            .review-card {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                aspect-ratio:1/1.7;
-                padding: 1rem;
-                margin-inline:1%;
-                border-radius: 8px;
-                margin-bottom: 1rem;
-                background-color: #f8f9fa;
-                width:45%;
-                flex-direction:column;
-                
-                
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            }
-            .review-card img {
-                width: 30px;
-                aspect-ratio:1/1;
-                border-radius: 50%;
-            }
-            .review-card > p{
-                font-size:.5385em;
-            }
-            .review-content{
-                display:flex;
-                align-items:center;
-                gap:12px;
-                width:100%;
-                
-            }
-            .review-content h3 {
-                font-size: .68em;
-                margin-bottom: 0.8em;
-            }
-            .review-content p {
-                font-size: 0.9em;
-                color: #555;
-            }
-            .review-rating {
-                display: flex;
-                align-items: center;
-                justify-content:space-evenly;
-                align-self:flex-start;
-                width:26%;
-                font-size:0.5em;
-            }
-            .review-rating i {
-                color: #ffc107;
-            }
-        </style>
+  const countdown = document.getElementById("countdown");
+
+  const interval = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance < 0) {
+      clearInterval(interval);
+      countdown.textContent = "Countdown ended";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdown.textContent = `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
+  }, 1000);
+</script>
+
+  </main>
+  <div class="hero" style="height:60vh;display: grid;place-items: center;">
+    Loading
+  </div>
+  <section class="ov" id="ov">
+    <h2>Looking to become an affiliate partner?</h2>
+    <p>Our affiliate program, called the Amanda Affiliates, provides a unique way for you to  link to and promote Amanda Services. Earn commissions on clients who may need our services that hire us through your link. Commissions can be earned from services i.e; Web development, App development, Social media management and Graphics design.</p>
+    <button><a href="">Join Now</a></button>
+  </section>
+  <section class="how" id="how">
+    <h2>How it works</h2>
+    <div class="content">
+      <div class="item">
+        <div class="heading">
+          <i class="fa fa-user-plus"></i>
+          <h3>Join</h3>
+        </div>
+        <p>Join from the <a href="">Sign Up Page</a> to get an account for free of charge. You will be provided with an affiliate link on the dashboard.</p>
+      </div>
+      <div class="item">
+        <div class="heading">
+          <i class="fa fa-bullhorn"></i>
+          <h3>Promote</h3>
+        </div>
+        <p>Promote your link with the support of exclusive offers and a library of banners, posters and other materials we provide.</p>
+      </div>
+      <div class="item">
+        <div class="heading">
+          <i class="fa fa-coins"></i>
+          <h3>Earn</h3>
+        </div>
+        <p>Earn for new customers you refer. Track your success on a live dashboard and withdraw your earnings with 1:1 support team.</p>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
     
-        <div class="review-card"> 
+    <div class="con" onclick="c(this)">
+  <p class="question">
+    <span>How do I sign up as an affiliate?</span>
+    <i class="fa fa-chevron-down"></i>
+  </p>
+  <p class="answer none">
+    Signing up as an affiliate is easy! Simply visit our registration page, fill out the required information, and you'll get access to your unique referral links and affiliate dashboard.
+  </p>
+</div>
 
-            <div class="review-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-             <p>I'm a teacher, and Stupoint has made my life so much easier! It helps me manage my classes and communicate with parents effectively.</p>
-            <div class="review-content">
-            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User Avatar">
+<div class="con" onclick="c(this)">
+  <p class="question">
+    <span>How do I track my referrals?</span>
+    <i class="fa fa-chevron-down"></i>
+  </p>
+  <p class="answer none">
+    You can track all your referrals through your personalized affiliate dashboard. It provides real-time updates on clicks, conversions, and earnings.
+  </p>
+</div>
 
-                <h3>John Doe</h3>
-            </div></div>
-        <div class="review-card"> 
-            <div class="review-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-             <p>Stupoint has been a game-changer for my studies. It's so organized and helps me stay on top of my assignments.</p>
-            <div class="review-content">
-            <img src="https://randomuser.me/api/portraits/women/75.jpg" alt="User Avatar">
+<div class="con" onclick="c(this)">
+  <p class="question">
+    <span>What commission do I earn as an affiliate?</span>
+    <i class="fa fa-chevron-down"></i>
+  </p>
+  <p class="answer none">
+    Our affiliates earn a competitive commission on every sale made through their referral link. The exact commission rate varies from 5% upto 10% based on the product or service being referred.
+  </p>
+</div>
 
-                <h3>Jane Smith</h3>
-            </div></div>
+<div class="con" onclick="c(this)">
+  <p class="question">
+    <span>How do I get paid?</span>
+    <i class="fa fa-chevron-down"></i>
+  </p>
+  <p class="answer none">
+    Payments are made through the withdraw page to your mobile money account for ugandans and non-ugandans through our agent.
+  </p>
+</div>
+<div class="con" onclick="c(this)">
+  <p class="question">
+    <span>Where is the money got from?</span>
+    <i class="fa fa-chevron-down"></i>
+  </p>
+  <p class="answer none">
+    The commission is earned after someone ordering for a service. The money earned is part of Amanda's profit for that project.
+  </p>
+</div>
+<div class="con" onclick="c(this)">
+  <p class="question">
+    <span>Can I promote your affiliate program on social media?</span>
+    <i class="fa fa-chevron-down"></i>
+  </p>
+  <p class="answer none">
+    Absolutely! You can promote our affiliate program on social media, blogs, and websites. Just make sure to use your unique affiliate link when sharing.
+  </p>
+</div>
 
-        <div class="review-card"> 
-            <div class="review-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-             <p>I love how Stupoint keeps me connected with my classmates and allows me to collaborate on projects easily.</p>
-            <div class="review-content">
-            <img src="https://randomuser.me/api/portraits/men/25.jpg" alt="User Avatar">
+<div class="con" onclick="c(this)">
+  <p class="question">
+    <span>What if my referral link isn't working?</span>
+    <i class="fa fa-chevron-down"></i>
+  </p>
+  <p class="answer none">
+    If you're experiencing issues with your referral link, contact our support team. We'll assist you in troubleshooting and ensure your link is functioning correctly.
+  </p>
+</div>
 
-                <h3>Peter Jones</h3>
-            </div></div>
+  </section>
+  
+  <style>
+  .faq .con:not(:has(.answer.none)) i{
+    transition: all;
+    transform: rotate(180deg);
+}
 
-        <div class="review-card"> 
-            <div class="review-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-             <p>Stupoint's communication tools are amazing! It makes staying in touch with my teachers and classmates a breeze.</p>
-            <div class="review-content">
-            <img src="https://randomuser.me/api/portraits/women/25.jpg" alt="User Avatar">
+  
+   .faq .con{
+      padding: 20px 8px;
+      border-top: solid 1px #aaa;
+    }
+    .faq .con:last-of-type{
+      border-block: solid 1px #aaa;
 
-                <h3>Maria Garcia</h3>
-            </div>
-            </div>
-        </div>
-    </div>
-    </div>
-
-
-    <footer>
-        <style>
-            footer {
-                background-color: #111;
-                padding: 2rem 0;
-                text-align: center;
-            }
-
-            footer p {
-                font-size: 0.568em;
-                color: #aaa;
-            }
-
-            footer a {
-                color: #007bff;
-                text-decoration: none;
-                transition: color 0.3s;
-            }
-
-            footer a:hover {
-                color: #0056b3;
-            }
-
-            .social-links {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: 1rem;
-            }
-
-            .social-links a {
-                display: inline-block;
-                margin: 0 1rem;
-                color: #555;
-                font-size: 1.2em;
-                transition: color 0.3s;
-            }
-
-            .social-links a:hover {
-                color: #0056b3;
-            }
-        </style>
-        <p><b>Quick links:</b> 
-        <a href="#features">Features</a>
-        <a href="#reviews">Reviews</a>
-        <a href="support/index.html">Support</a>
-        </p>
-        <p>&copy; 2025 Stupoint. All rights reserved.</p>
-        <p>Designed by Stupoint. Developed by Stupoint.</p>
-        <div class="social-links">
-            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-    </footer>
+    }
+    .question{
+      display:flex;
+      gap: 7px;
+      font-weight: 600;
+      align-items: center;
+      font-size:1.14em;
+      justify-content: space-between;
+    }
     
-    <div class="signup s">
-        <div class="con">
-            <h2>Sign Up</h2>
-            <button><a href="192.168.0.110:22080/portal/pages/userrpm/portal_login.html?clientMac=8A:70:C7:0A:40:DF&origUrl=http://198.16.0.10/">As a Student</a></button>
-            <button><a href="g.com">As a Teacher</a></button>
-            <button><a href="">As an Administrator</a></button>
-            <br><br>
-            <button class="i" onclick="show('l')">Log in instead</button>
-            <button class="i" onclick="hide('s')">Cancel</button>
-        </div>
-    </div>
-    <div class="signup l">
-        <div class="con">
-            <h2>Log in</h2>
-            <button><a href="">As a Student</a></button>
-            <button><a href="">As a Teacher</a></button>
-            <button><a href="">As an Administrator</a></button>
-            <br><br>
-            <button class="i" onclick="show('s')">Sign up instead</button>
-            <button class="i" onclick="hide('l')">Cancel</button>
-        </div>
-    </div>
+    .answer{
+      color: #333;
+      margin-top: 8px;
+    }
+    .none{
+      display: none;
+    }
+  </style>
+  <footer class="">
+    <p class="coy">&copy; 2025 Amanda Inc. All rights reserved.</p>
+    <p><b>Legal:</b>
+     <a href="..legal/terms.html">Terms</a> | 
+     <a href="../legal/privacy.html">Privacy Policy</a> | 
+     <a href="../legal/disclaimer.html">Disclaimer</a>.
+    </p>
+    <br><br>
+    <p class="d">DEVELOPERS</p>
+    <h4>Amanda Inc.</h4>
+    <p class="aa"><a href="../index.html">About Amanda</a><a href="../index.html">Amanda Products</a><a href="../legal/terms.html">Terms</a></p>
     
-    <style>
-        .signup{
-            position: fixed;
-            inset: 0;
-            backdrop-filter: blur(6px);
-            display: grid;
-            display: none;
-            background: #0007;
-            place-items: center;
-        }
-        .signup .con{
-            width: 80%;
-            text-align: center;
-            aspect-ratio: 2/1;
-            border-radius: 12px;
-            background: whitesmoke;
-            padding: 8px;
-        }
-        .con button{
-            background: black;
-            border: none;
-            width: 90%;
-            padding-block: 14px;
-            color: white;
-            border-radius: 28px;
-            border:none;
-            margin-block: 8px;
-        }
-        .con button.i{
-            border:solid 2px black;
-            background:whitesmoke;
-            color: black;
-         }
-        .con button a{color: white;text-decoration: none;}
-    </style>
-    <script>
-        console.log(window.location.href);
-        
-        function shift(t){
-            if(t == "l"){
-                return 's';
-            }
-            else{
-                return 'l'
-            }
-        }
-        function show(t){
-            var ts = document.querySelector('.signup.'+t);
-            ts.style.display = 'grid';
-             
-            hide(shift(t))
-        }
-        function hide(t){
-            var ts = document.querySelector('.signup.'+t);
-            ts.style.display = 'none'
-             
-        }
-    </script>
+    
+  </footer>
+  <script src="main.js"></script>
+
 </body>
 </html>

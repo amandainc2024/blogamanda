@@ -1,0 +1,208 @@
+*{
+    box-sizing: border-box;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+body {
+    font-size: 12pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav{
+    position: fixed;
+    inset: 0;
+    height: 50px;
+    width: 100%;
+    border-bottom: solid 1px #eee;
+    display: flex;
+    align-items: height;
+    background:#fff;
+}
+nav .items{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    overflow: hidden;
+    height: 0vh;
+    transition: height .31s;
+    background: #eee;
+
+}
+nav .items a:last-of-type{
+    background: #0663ff;
+    color: #fff;
+    width: 90%;
+    padding-block: 10px;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+nav .items a{
+    font-size: .8em;
+    color: #222;
+    text-decoration: none;
+}
+nav .upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-inline: 14px;
+}
+nav .upper img{
+    width: 25px;
+}
+main{
+    height: 60vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+}
+.hero{
+    margin-top: -20vh;
+}
+main h1{
+    font-size: 2.4em;
+    font-weight: 600;
+}
+main p{
+    width: 70%;
+    font-size: .9em;
+    color: #666;
+}
+button {
+    border:none;
+    
+    
+}
+main button, #ov button{
+    background: #0663ff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 1em;
+}
+main button.out{
+    background: #eee;
+}
+main button.out a{
+    color: #000;
+}
+ button a{
+    text-decoration: none;
+    color: white;
+}
+
+section{
+    margin-block: 28px;
+}
+section h2{
+    text-align: center;
+    margin-block:30px 12px;
+    
+}
+#ov{
+    background: #eee;
+    padding-block: 20px;
+    text-align: center;
+}
+#ov p{
+    font-size: 1.1em;
+    color: #333;
+    line-height: 24px;
+}
+.how .content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.how .content p{
+    font-size: .9em;
+    color: #555;
+}
+.how .content .item{
+    width: 100%;
+    padding: 14px;
+}
+.how .content .heading{
+    display: flex;
+    align-items: center;
+    margin-block: 7px;
+}
+.how .content .heading i{
+    color: #F7AF10;
+    margin-inline: 7px;
+    font-size: 2em;
+}
+.how .content .heading h3{
+    font-size: 1em;
+}
+
+footer{
+    background: #eee;
+    font-size: 14px;
+    color: #555;
+    padding-block: 20px;
+    padding-left: 8px;
+}
+footer .coy{
+    text-align: center;
+}
+footer p{
+    margin-block: 6px;
+}
+footer b{
+    color: #000;
+}
+footer a{
+    color: #222;
+}
+footer .d{
+    font-size: .7em;
+}
+footer h4{
+    font-size: 2em;
+}
+footer .aa a{
+    margin-right: 20px;
+}
+@media screen and (min-width: 400px) {
+    body{
+        font-size: 10pt;
+    }
+    nav{
+        height: 40px;
+    }
+    nav .items{
+        width: 40%;
+        left: 60%;
+        top: 40px;
+    }
+    main{
+        margin-top: 10vh;
+    }
+    .hi{
+        width: 40%;
+        margin-left: 30%;
+    }
+    .how .content{
+        flex-direction: row;
+    }
+    footer{
+        font-size: 10px;
+    }
+ 
+}
